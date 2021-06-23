@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery对象转DOM对象</title>
+    <script src="jquery.js"></script>
+    <style>
+        video {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <video src="snake.mp4" muted></video>
+    <script>
+        // 1.DOM对象转化为jQuery对象
+        // (1)我们直接获取视频，得到就是jQuery对象
+        $('video');
+        // (2)我们幽静使用原生js获取过来DOM对象
+        var myvideo = document.querySelector('video');
+        // $(myvideo).play(); jQuery里面没有play这个方法
+
+        // 2.jQuery对象转换为DOM对象
+        // myvideo.play(); //谷歌浏览器禁用自动播放，要加添加myted属性才能播放。
+        $('video')[0].play();
+        // $('video').get(0).play(); 和上面作用一样--另一种方法
+    </script>
+</body>
+
+</html>
