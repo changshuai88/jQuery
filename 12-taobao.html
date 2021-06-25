@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝案例</title>
+    <script src="jquery.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+        }
+
+        .wrapper {
+            border: solid 1px pink;
+            margin: 50px;
+            width: 515px;
+            height: 250px;
+        }
+
+
+
+        #left {
+            height: 250px;
+            text-align: center;
+            width: 100px;
+            display: flex;
+            float: left;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        }
+
+        #left li {
+            flex-grow: 1;
+            border: solid pink 1px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: linear-gradient(to bottom, white, rgb(248, 208, 214));
+        }
+
+        /* #left li a {
+            flex-grow: 1;
+        } */
+
+
+
+        #content {
+            position: relative;
+            display: block;
+            float: right;
+            width: 415px;
+            height: 250px;
+        }
+
+        #content div {
+            position: absolute;
+        }
+    </style>
+    <script>
+        $(function () {
+            //1.鼠标经过左侧的小li
+            $("#left li").mouseover(function () {
+                // 2.得到当前小li的索引号
+                var index = $(this).index();
+                console.log(index);
+                // 3.让我们右侧的盒子相应索引号的图片显示就好了
+                $("#content div").eq(index).show();
+                //4.让其余的图片隐藏（他的兄弟们）
+                $("#content div").eq(index).siblings().hide();
+
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul id="left">
+            <li><a href="#">女靴</a></li>
+            <li><a href="#">雪地鞋</a></li>
+            <li><a href="#">冬裙</a></li>
+            <li><a href="#">呢大衣</a></li>
+            <li><a href="#">毛衣</a></li>
+            <li><a href="#">棉服</a></li>
+            <li><a href="#">女裤</a></li>
+            <li><a href="#">羽绒服</a></li>
+            <li><a href="#">牛仔裤</a></li>
+        </ul>
+        <div id="content">
+            <div><a href="#"><img src="./img/a (2).jpg" alt="" width="413" height="250"></a></div>
+            <div><a href="#"><img src="./img/a (3).jpeg" alt="" width="413" height="250"></a></div>
+            <div><a href="#"><img src="./img/a (3).jpg" alt="" width="413" height="250"></a></div>
+            <div><a href="#"><img src="./img/a (4).jpeg" alt="" width="413" height="250"></a></div>
+            <div><a href="#"><img src="./img/a (4).jpg" alt="" width="413" height="250"></a></div>
+            <div><a href="#"><img src="./img/a (5).jpeg" alt="" width="413" height="250"></a></div>
+            <div><a href="#"><img src="./img/a (5).jpg" alt="" width="413" height="250"></a></div>
+            <div><a href="#"><img src="./img/a (6).jpeg" alt="" width="413" height="250"></a></div>
+            <div><a href="#"><img src="./img/a (7).jpg" alt="" width="413" height="250"></a></div>
+        </div>
+    </div>
+</body>
+
+</html>

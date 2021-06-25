@@ -82,3 +82,6 @@ $('选择器')  //里面选择器直接写CSS选择器即可，但要加引号
 |prevtAll([expr])|$(".last").prevAll():|查找当前元素之前所有的同辈元素|
 |hasClass(class)|$('div').hasClass('protected')|检查当前的元素是否含有某个特定的类，如果有，则返回true|
 |eq(index)|$("li").eq(2);|相当于$("li:eq(2)"),index从0开始|
+
+## 1.6jQuery中的排他思想
+想要多选一的效果,排他思想:当前元素设置样式,其余的兄弟元素清除样式.
