@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery效果之淡入淡出</title>
+    <script src="jquery.js"></script>
+    <style>
+        div {
+            width: 200px;
+            display: none;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button>淡入效果</button>
+    <button>淡出效果</button>
+    <button>切换效果</button>
+    <button>修改透明效果</button>
+    <div></div>
+    <script>
+        $(function () {
+            $("button").eq(0).click(function () {
+                //淡入效果 fadeIn()
+                $("div").fadeIn(1000);
+            })
+            $("button").eq(1).click(function () {
+                //淡入效果 fadeIn()
+                $("div").fadeOut(1000);
+            })
+            $("button").eq(2).click(function () {
+                //淡入效果 fadeIn()
+                $("div").fadeToggle(1000);
+            })
+            $("button").eq(3).click(function () {
+                //淡入效果 fadeTo()这个速度和透明度必须要写
+                $("div").fadeTo(1000, 0.5);
+            })
+        })
+    </script>
+</body>
+
+</html>

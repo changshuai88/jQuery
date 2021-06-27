@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>突出显示</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            background-color: black;
+            justify-content: center;
+
+        }
+
+        .wrap {
+            align-items: center;
+            /* background-color: yellow; */
+            width: 612px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .wrap ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .wrap ul li {
+
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0 2px;
+            width: 200px;
+        }
+
+        .wrap img {
+            /* float: left; */
+            width: 200px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <ul>
+            <li><a href="#"><img src="./img/a (2).jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/a (3).jpeg" alt=""></a></li>
+            <li><a href="#"><img src="./img/a (3).jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/a (4).jpeg" alt=""></a></li>
+            <li><a href="#"><img src="./img/a (7).jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/a (5).jpeg" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
