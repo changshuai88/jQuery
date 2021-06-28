@@ -164,3 +164,12 @@ fadeIn([speed,[easing],[fn]])
     3.1 opacity透明度必须写，取值0-1之间
     3.2 speed：三种预定速度之一...必须写
     3.3 easing：....
+
+## 3.6自定义动画animate
+1.语法
+    animate(params,[speed],[easing],[fn])
+2.参数
+    2.1params：想要更改的样式属性，以对象形式传递，必须写，属性名可以不用带引号，如果是复合属性则需要采取驼峰命名法，borderLeft，其余参数都可以省略
+    2.2speed。。
+    2.3 easing...
+    2.4 fn回调函数...
