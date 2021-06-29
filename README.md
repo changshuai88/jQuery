@@ -173,3 +173,7 @@ fadeIn([speed,[easing],[fn]])
     2.2speed。。
     2.3 easing...
     2.4 fn回调函数...
+
+## 手风琴动画，只能用position属性，不然动画效果会出问题。
+
+

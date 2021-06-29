@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手风琴效果</title>
+    <script src="jquery.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            width: 100vh;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            align-content: center;
+        }
+
+        .king {
+            margin-left: 200px;
+            display: flex;
+            flex-direction: row;
+            width: 700px;
+            height: 100px;
+            background-color: blue;
+            /* align-items: center; */
+            /* justify-content: center; */
+
+        }
+
+        .king ul {
+            display: flex;
+            flex-direction: row;
+            /* overflow: hidden; */
+        }
+
+        .king ul li {
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .small {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            float: left;
+            padding-left: 2px;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .big {
+            display: none;
+            width: 130px;
+            border-radius: 5px;
+        }
+
+        .current .big {
+            display: block;
+
+        }
+
+        .current .small {
+            display: none;
+        }
+    </style>
+
+    <!-- <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        ul {
+            /* width: 700px;
+            height: 100px; */
+            list-style: none;
+        }
+
+        .king {
+            width: 800px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: blue;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .king ul {
+            overflow: hidden;
+        }
+
+        .king li {
+            /* display: inline-block; */
+            position: relative;
+            float: left;
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+
+        }
+
+        .king li.current {
+            width: 130px;
+        }
+
+        .king li.current .big {
+            display: block;
+        }
+
+        .king li.current .small {
+            display: none;
+        }
+
+        .big {
+            width: 130px;
+            display: none;
+        }
+
+        .small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="king">
+        <ul>
+            <li class="current">
+                <a href="#">
+                    <img src="./img/xa (2).jpg" alt="" class="small">
+                    <img src="./img/a (2).jpg" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/xa (3).jpeg" alt="" class="small">
+                    <img src="./img/a (3).jpeg" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/xa (3).jpg" alt="" class="small">
+                    <img src="./img/a (3).jpg" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/xa (4).jpeg" alt="" class="small">
+                    <img src="./img/a (4).jpeg" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/xa (4).jpg" alt="" class="small">
+                    <img src="./img/a (4).jpg" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/xa (5).jpeg" alt="" class="small">
+                    <img src="./img/a (5).jpeg" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="./img/xa (6).jpeg" alt="" class="small">
+                    <img src="./img/a (6).jpeg" alt="" class="big">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function () {
+            //鼠标经过某个小li 有两步操作：
+            $(".king li").mouseenter(function () {
+                // 1.当前小li 宽度变为160px，同时里面的小图片淡出，大图片淡入
+                $(this).animate({
+                    width: 130,
+                    paddingLeft: 2,
+                    paddingRight: 2
+                }).find(".small").stop().fadeOut().siblings(".big").stop().fadeIn();
+                // 2.其余的兄弟小li宽度变为80px，小图片淡入，大图片淡出
+                $(this).siblings("li").animate({
+                    width: 80,
+                    paddingLeft: 2
+                }).find(".small").stop().fadeIn().siblings(".big").stop().fadeOut();
+            })
+        })
+    </script>
+</body>
+
+</html>
