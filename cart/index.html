@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>购物车</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
     <link rel="stylesheet" href="cart.css">
     <script src="../jquery.js"></script>
     <script src="cart.js"></script>
@@ -21,6 +22,7 @@
             <div class="t-goods">商品</div>
             <div class="t-price">单价</div>
             <div class="t-num">数量</div>
+            <div class="t-sum">小计</div>
             <div class="t-action">操作</div>
         </div>
         <!-- 商品详细模块 -->
@@ -38,6 +40,7 @@
                     </div>
                 </div>
                 <div class="p-price">￥12.60</div>
+                
                 <div class="p-num">
                     <div class="quantity-form">
                         <a href="javascript:;" class="decrement">-</a>
@@ -45,6 +48,32 @@
                         <a href="javascript:;" class="increment">+</a>
                     </div>
                 </div>
+                <div class="p-sum">￥12.60</div>
+                <div class="p-action"><a href="javascript:;">删除</a></div>
+            </div>
+            <div class="cart-item check-cart-item">
+                <div class="p-checkbox">
+                    <input type="checkbox" name="" id="" checked class="j-checkbox">
+                </div>
+                <div class="p-goods">
+                    <div class="p-img">
+                        <img src="../img/xa (2).jpg" alt="">
+                    </div>
+                    <div class="p-msg">
+                        这样点击了a标签，执行一段JavaScript代码，而 javascript:; 表示什么都不执行，这样点击a标签时就没有任何反应。
+                    </div>
+                </div>
+                
+                <div class="p-price">￥12.60</div>
+                <div class="p-num">
+                    <div class="quantity-form">
+                        <a href="javascript:;" class="decrement">-</a>
+                        <input type="text" name="" class="itxt" value="1" id="">
+                        <a href="javascript:;" class="increment">+</a>
+                    </div>
+                </div>
+                <div class="p-sum">￥12.60</div>
+                <div class="p-action"><a href="javascript:;">删除</a></div>
             </div>
             <div class="cart-item check-cart-item">
                 <div class="p-checkbox">
@@ -66,27 +95,8 @@
                         <a href="javascript:;" class="increment">+</a>
                     </div>
                 </div>
-            </div>
-            <div class="cart-item check-cart-item">
-                <div class="p-checkbox">
-                    <input type="checkbox" name="" id="" checked class="j-checkbox">
-                </div>
-                <div class="p-goods">
-                    <div class="p-img">
-                        <img src="../img/xa (2).jpg" alt="">
-                    </div>
-                    <div class="p-msg">
-                        这样点击了a标签，
-                    </div>
-                </div>
-                <div class="p-price">￥12.60</div>
-                <div class="p-num">
-                    <div class="quantity-form">
-                        <a href="javascript:;" class="decrement">-</a>
-                        <input type="text" name="" class="itxt" value="1" id="">
-                        <a href="javascript:;" class="increment">+</a>
-                    </div>
-                </div>
+                <div class="p-sum">￥12.60</div>
+                <div class="p-action"><a href="javascript:;">删除</a></div>
             </div>
         </div>
 
@@ -100,8 +110,8 @@
                 <a href="javascript:;" class="clear-all">清理购物车</a>
             </div>
             <div class="toolbar-right">
-                <div class="amount-sum">已经选<em>1</em>件商品</div>
-                <div class="price-sum">总价: <em>￥12.60</em></div>
+                <div class="amount-sum">已经选 <em>1</em> 件商品</div>
+                <div class="price-sum">总价: <em>￥12.60</em> 元</div>
                 <div class="btn-area">去结算</div>
             </div>
         </div>
