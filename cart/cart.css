@@ -7,7 +7,7 @@
 .cart-warp {
   width: 90%;
   height: 80%;
-  background-color: darkgreen;
+  /* background-color: darkgreen; */
   margin: 0 auto;
 }
 .cart-thead {
@@ -16,23 +16,94 @@
 }
 .cart-item {
   height: 150px;
-  background-color: green;
+  /* background-color: red; */
 }
-.cart-thead > div,
-.cart-item > div {
+.cart-thead > div {
   width: 140px;
   line-height: 50px;
   text-align: center;
   float: left;
 }
-.cart-thead div:nth-child(2),
-.cart-item div:nth-child(2) {
+.cart-thead div:nth-child(2) {
   width: 400px;
   line-height: 50px;
   text-align: center;
   float: left;
 }
+.cart-item {
+  height: 150px;
+  width: 100%;
+  /* background-color: royalblue; */
+  border-top: black 1px solid;
+  padding-top: 25px;
+}
+.cart-item > div {
+  width: 140px;
+  float: left;
+  height: 150px;
+  text-align: center;
+}
+.cart-item .p-goods {
+  width: 400px;
+  overflow: hidden;
+}
 .p-img img {
   width: 100px;
   height: 100px;
+  float: left;
+}
+.p-goods .p-msg {
+  width: 300px;
+  height: 150px;
+  float: right;
+  margin-top: 25px;
+}
+.p-num .quantity-form a{
+  display: block;
+  width: 20px;
+  height: 17px;
+  background-color: white;
+  float: left;
+  border: #ccc 1px solid;
+  
+
+}
+.p-num .quantity-form {
+  padding-left: 30px;
+  height: 150px;
+  /* border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc; */
+
+}
+.p-num .quantity-form input{
+  border: #ccc 1px solid;
+
+  height: 17px;
+  /* border:none; */
+  display:block;
+  width: 40px;
+  text-align: center;
+  float: left;
+  /* outline: none; */
+}
+.cart-floatbar {
+  height: 50px;
+  background-color: gray;
+  padding-top: 10px;
+  padding-left: 50px;
+}
+.cart-floatbar .operation {
+  /* background-color: greenyellow; */
+  display: block;
+  float: left;
+  width: 300px;
+}
+.cart-floatbar div {
+  float: left;
+  width: 140px;
+}
+.cart-floatbar .toolbar-right {
+  float: right;
+  width: 550px;
+  /* background-color: green; */
 }
