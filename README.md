@@ -220,3 +220,16 @@ fadeIn([speed,[easing],[fn]])
     主要是遍历、创建、添加、删除元素操作
 
 ## 7.1 遍历元素
+    jQuery隐式迭代是同一类元素做了同样的操作，如果想要给同一类元素做不同操作，就需要用到遍历。
+
+    语法1：
+    $("div").each(function(index,domEle){xxx;})
+    1.each()方法遍历匹配的每一个元素，主要用DOM处理，each每一个、
+    2.里面的回调函数有2个参数，index是每个元素的索引号，demEle是每个DOM元素对象，不是jQuery对象。
+
+    语法2：
+    $.each(object,function(index,element){xxx;})
+
+    1.$.each()方法可用于遍历任何对象，主要用于数据处理，比如数组，对象。
+    2.里面的函数有2个参数，index是每个元素的索引号，element遍历内容
+    
