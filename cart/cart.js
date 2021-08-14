@@ -62,6 +62,15 @@ $(function(){
         var p=$(this).parents(".p-num").siblings(".p-price").html();
         p=p.substr(1);
         $(this).parents(".p-num").siblings(".p-sum").html("￥"+ (p*n).toFixed(2));
-    })
+    });
+    //5.  计算总计和总额模块
+    function getSum(){
+        var count = 0; //计算总件数
+        var money = 0; //计算总价钱
+        $(".itxt").each(function(i,ele){
+            count += $(ele).val();
+        })
+    }
+
 
 })
