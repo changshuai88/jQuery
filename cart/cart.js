@@ -33,6 +33,7 @@ $(function(){
         // console.log(p);
         // 计算小计
         $(this).parents(".p-num").siblings(".p-sum").html("￥"+(p*n).toFixed(2));
+        getSum();
     })
 
     $(".decrement").click(function(){
@@ -53,6 +54,7 @@ $(function(){
         // console.log(p);
         // 计算小计
         $(this).parents(".p-num").siblings(".p-sum").html("￥"+(p*n).toFixed(2));
+        getSum();
     })
 
     // 4.用户修改文本框的值，计算小计模块
@@ -62,15 +64,42 @@ $(function(){
         var p=$(this).parents(".p-num").siblings(".p-price").html();
         p=p.substr(1);
         $(this).parents(".p-num").siblings(".p-sum").html("￥"+ (p*n).toFixed(2));
+        getSum();
     });
     //5.  计算总计和总额模块
+    getSum();
     function getSum(){
         var count = 0; //计算总件数
         var money = 0; //计算总价钱
         $(".itxt").each(function(i,ele){
-            count += $(ele).val();
-        })
+            count +=parseInt( $(ele).val());
+        });
+        $(".amount-sum em").text(count);
+
+        $(".p-sum").each(function(i,ele){
+            money+= parseFloat($(ele).text().substr(1));
+        });
+        $(".price-sum em").text("￥"+money.toFixed(2));
     }
 
+    //6.删除商品模块
+    //(1)商品后面的删除按钮
+    $(".p-action a").click(function(){
+        //删除的是当前的商品
+        $(this).parents(".cart-item").remove();
+        getSum();
+    });
+
+    //(2)删除选中的商品
+    $(".remove-batch").click(function(){
+        //删除的是小的复选框选中的商品
+        $(".j-checkbox:checked").parents(".cart-item").remove();
+        getSum();
+    })
+    //(3)清空购物车 删除全部商品
+    $(".clear-all").click(function(){
+        $(".cart-item").remove();
+        getSum();
+    })
 
 })

@@ -231,5 +231,29 @@ fadeIn([speed,[easing],[fn]])
     $.each(object,function(index,element){xxx;})
 
     1.$.each()方法可用于遍历任何对象，主要用于数据处理，比如数组，对象。
-    2.里面的函数有2个参数，index是每个元素的索引号，element遍历内容
+    2.里面的函数有2个参数，index是每个元素的索引号，element遍历
+## 7.2 创建元素
+    语法：
+        $("<li></li>");
+    动态的创建了一个li标签
+## 7.3添加元素
+    1.内部添加
+    element.append("内容")
+    把内容放入匹配元素内部最后面，类似原生appendChild。
+    element.prepend("内容")
+    把内容放入匹配元素内容最前面。
+    2.外部添加
+    element.after("内容") 把内容放入目标元素后面
+
+    element.before("内容") 把内容放入目标元素前面
+### 内部添加元素,生成之后,他们是父子关系
+### 外部添加元素,生成之后,他们是兄弟关系
+
+## 7.4删除元素
+    element.remove()  删除匹配的元素(本身)
+
+    element.empty()   删除匹配的元素集合中的所有的子节点
+
+    element.html("")   清空匹配的元素内容
+
     
