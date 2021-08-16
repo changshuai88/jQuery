@@ -4,6 +4,15 @@ $(function(){
     //事件可以使用change
     $(".checkall").change(function(){
          $(".j-checkbox,.checkall").prop("checked",$(this).prop("checked"));
+         if($(this).prop("checked")){
+             //让所有的商品添加check-cart-item类名
+             $(".cart-item").addClass("check-cart-item");
+
+         }else{
+             //check-cart-item移除
+             $(".cart-item").removeClass("check-cart-item");
+
+         }
     })
 
     // 2.如果小复选框被选中的个数等于3 就应该把全选按钮选上，否则全选按钮不选
@@ -14,12 +23,20 @@ $(function(){
         }else{
             $(".checkall").prop("checked",false);
         }
+
+        if($(this).prop("checked")){
+            //让当前的商品添加check-cart-item类名
+            $(this).parents(".cart-item").addClass("check-cart-item");
+        }else{
+            //check-cart-item移除
+            $(this).parents(".cart-item").removeClass("check-cart-item");
+        }
     })
-    $(".check-cart-item ").hover(function(){
-        $(this).css("background-color","pink");
-    },function(){
-        $(this).css("background-color","");
-    })
+    // $(".check-cart-item ").hover(function(){
+    //     $(this).css("background-color","pink");
+    // },function(){
+    //     $(this).css("background-color","");
+    // })
 
     // 3.增减产品数量模块，首先声明一个变量，当我们点击+号(increment),就让这个值++，然后赋值给文本框。
     $(".increment").click(function(){
@@ -101,5 +118,7 @@ $(function(){
         $(".cart-item").remove();
         getSum();
     })
+
+
 
 })
