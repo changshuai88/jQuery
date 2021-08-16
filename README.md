@@ -256,4 +256,19 @@ fadeIn([speed,[easing],[fn]])
 
     element.html("")   清空匹配的元素内容
 
+# 8.jquery事件注册
+
+## 8.1单个事件注册
+    语法： element.事件(function(){})
+    $("div").click(function(){事件处理程序})
+
+    其他事件和原生基本一致
+    比如mouseover,mouseout,blur,focus,change,keydown,keyup,resize,scroll等
+## 8.2事件处理on()绑定事件
+on()方法再匹配元素上绑定一个或多个事件的事件处理函数
+语法：
+    element.on(events,[selector],fn)
+    1.events:一个或多个用空格分隔的事件类型，比如"click"或"keydown".
+    2.selector:元素的子元素选择器。
+
     
