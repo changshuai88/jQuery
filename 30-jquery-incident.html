@@ -13,21 +13,70 @@
             background-color: pink;
 
         }
+
+        .current {
+            background-color: purple;
+        }
     </style>
     <script src="./jquery.js"></script>
 </head>
 
 <body>
     <div></div>
+    <ul>
+        <li>窗前明月光</li>
+        <li>窗前明月光</li>
+        <li>窗前明月光</li>
+        <li>窗前明月光</li>
+        <li>窗前明月光</li>
+    </ul>
+    <ol>
+
+    </ol>
     <script>
         $(function () {
             //1.单个事件注册
-            $("div").click(function () {
+            /*$("div").click(function () {
                 $(this).css("background", "purple");
-            })
+            });
             $("div").mouseenter(function () {
                 $(this).css("background", "skyblue");
+            });*/
+
+            //2.事件处理 on
+            //(1)on可以绑定1个或多个事件处理程序
+            /* $("div").on({
+                 mouseenter: function () {
+                     $(this).css("background", "skyblue");
+                 },
+                 click: function () {
+                     $(this).css("background", "purple");
+                 },
+                 mouseleave: function () {
+                     $(this).css("background", "blue");
+                 }
+             }); */
+
+            $("div").on("mouseenter mouseleave", function () {
+                $(this).toggleClass("current");
+            });
+            //(2)on 可与实现事件委托(委派)
+            $("ul").on("click", "li", function () {
+                alert(11);
+            });
+            //click是绑定在ul身上的，但是触发的对象是ul里面的li。
+
+
+            //(3)on 可以给动态创建的元素绑定事件
+            // $("ol li").click(function () {
+            //     alert(11);
+            // });
+            $("ol").on("click", "li", function () {
+                // alert(11);
+                $(this).css("background", "yellow"); //this 指的是li
             })
+            var li = $("<li>我是后来创建的</li>");
+            $("ol").append(li);
         })
     </script>
 </body>

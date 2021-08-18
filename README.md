@@ -270,5 +270,17 @@ on()方法再匹配元素上绑定一个或多个事件的事件处理函数
     element.on(events,[selector],fn)
     1.events:一个或多个用空格分隔的事件类型，比如"click"或"keydown".
     2.selector:元素的子元素选择器。
+    3.fn：回调函数 即绑定在元素身上的侦听函数。
+
+on()方法优势2：
+可以事件委派操作，事件委派的定义就是，把原来加给子元素身上的事件绑定在父元素身上，就是把事件委派给父元素。
+
+$("ul").on("click","li",function(){
+    alert("hello world");
+});
+
+### 在此前有bind(),live(),delegate()等方法来处理事件绑定或者事件委派，最新版本的请用on替代他们。
+
+
 
     
