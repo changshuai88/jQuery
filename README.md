@@ -297,6 +297,41 @@ $("ul").off("click","li"); //解绑事件委托
 1.  element.click()   //第一种简写形式
 2.  element.trigger("type") // 第二种自动触发模式
 3.  element.triggerHandler(type) //第三种自动触发模式
+## 8.5jQuery事件对象
+
+事件被处罚，就会有事件对象的产生
+element.on(events,[selector],function(event){})
+
+阻止默认行为，event.preventDefault()或者return false 
+阻止冒泡：event.stopPropagation().
+
+# 9.1 jQuery对象拷贝
+
+如果想要把某个对象拷贝(合并)给另一个对象使用，此时可以使用$.extend()方法。
+
+语法：
+    $.extend([deep],target,object1,[objectN])
+    1.deep:如果设为true为深拷贝，默认为false浅拷贝
+    2.target要拷贝的目标对象
+    3.object1：待拷贝到第一个对象的对象
+    4.objectN: 待拷贝到第N个对象的对象
+    5.浅拷贝是把被拷贝的对象复杂数据类型中的地址拷贝给目标对象，修改目标对象会影响被拷贝对象。
+    6.深拷贝，前面加true，完全克隆(拷贝的对象，而不是地址)，修改目标对象不会影响被拷贝对象。
+
+# 9.2 jquery 多库共存
+
+问题概述：
+    jQuery使用$作为标示符，随着jQuery的流行，其他js库也会用这$作为标识符，这样一起使用会引起冲突。
+客观需求：
+    需要一个解决方案，让jQuery和其他的js库不存在冲突，可以同时存在，这就叫做多库共存
+jQuery解决方案：
+1.把jQuery里面的$符号同意改为jQuery，比如：jQuery("div")
+2.jQuery变量规定新的名称：$noConflict() var xx=$.noConflict();
+
+
+    
+
+
 
 
 
