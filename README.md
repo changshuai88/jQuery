@@ -328,6 +328,13 @@ jQuery解决方案：
 1.把jQuery里面的$符号同意改为jQuery，比如：jQuery("div")
 2.jQuery变量规定新的名称：$noConflict() var xx=$.noConflict();
 
+# 9.3 jQuery插件
+    jQuery功能比较有限，想要更复杂的特殊效果，可以借助jQuery插件完成。
+    注意：这些插件也是依赖于jQuery来完成的，所以必须要先引入jQuery文件，因此也称为jQuery插件。
+## jQuery插件常用的网站：
+1.jQuery插件库：http://www.jq22.com/
+2.jQuery之家：http://www.htmleaf.com/
+
 
     
 
