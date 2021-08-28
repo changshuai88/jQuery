@@ -335,6 +335,11 @@ jQuery解决方案：
 1.jQuery插件库：http://www.jq22.com/
 2.jQuery之家：http://www.htmleaf.com/
 
+## jquery插件使用步骤
+
+1.引入相关文件，（jquery文件和插件文件）
+2.复制相关html、css、js（调用插件）
+
 
     
 
