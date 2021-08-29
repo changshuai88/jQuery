@@ -335,12 +335,25 @@ jQuery解决方案：
 1.jQuery插件库：http://www.jq22.com/
 2.jQuery之家：http://www.htmleaf.com/
 
-## jquery插件使用步骤
+## jquery插件使用步骤：
 
 1.引入相关文件，（jquery文件和插件文件）
 2.复制相关html、css、js（调用插件）
 
+## jQuery插件演示：
+1.瀑布流
+2.图片懒加载(图片使用延迟加载可提高网页下载速度。它也能帮助减轻服务器负载)
+    当我们页面滑动到可视区域，再显示图片。
+    我们使用jQuery插件库Easylazyload。注意，此时的js引入文件和js调用必须写到DOM元素（图片）最后面。
 
+3.全屏滚动(fullpage.js)
+
+    github:https://github.com/alvarotrigo/fullPage.js
+    中文翻译网站：http://www.dowebok.com/demo/2014/77/
+
+4.bootstrap JS 插件
+bootstrap框架也是依赖于jQuery开发的，因此里面的js插件使用，也必须引入jQuery文件。
+    
     
 
 
