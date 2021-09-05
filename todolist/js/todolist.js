@@ -20,7 +20,23 @@ $(function(){
             // 2.todolist本地存储数据渲染加载到页面
             load();
         }
-    })
+    });
+    // 3.todolist删除操作
+    $("ol").on("click","a",function(){
+        // alert(11);
+        // 先获取本地存储
+        var  data=getData();
+        // console.log(data);
+        // 修改数据
+        var index = $(this).attr("id");
+        console.log(index);
+        data.splice(index,1);
+        // 保存到本地存储
+        saveData(data);
+        // 重新渲染页面
+        load();
+    });
+
 
     //读取本都存储的数据，由于经常用，定义一个方法
     function getData() {
@@ -48,7 +64,7 @@ $(function(){
         //遍历这个数据
         $.each(data,function(i,n){
             // console.log(n);
-            $("ol").prepend("<li><input type='checkbox' ><p>"+n.title+"</p> <a href='javascript:;'></a></li>");
+            $("ol").prepend("<li><input type='checkbox' ><p>"+n.title+"</p> <a href='javascript:;' id="+i+"></a></li>");
         })
     }
 })
