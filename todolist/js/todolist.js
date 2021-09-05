@@ -22,7 +22,7 @@ $(function(){
         }
     });
     // 3.todolist删除操作
-    $("ol").on("click","a",function(){
+    $("ol ul").on("click","a",function(){
         // alert(11);
         // 先获取本地存储
         var  data=getData();
