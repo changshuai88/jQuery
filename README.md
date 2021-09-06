@@ -392,6 +392,29 @@ bootstrap框架也是依赖于jQuery开发的，因此里面的js插件使用，
     6.重新渲染加载数据列表。
     7.因为a是动态创建的，我们使用on()方法绑定事件。
     
+    案例：todolist正在进行和已完成选项操作
+    1.当我们点击了小的复选框，修改本地存储数据，再重新渲染数据列表。
+    2.点击之后，获取本地存储数据。
+    3.修改对应数据属性done为当前复选框的checked状态。
+    4.之后保存数据到本地存储。
+    5.重新渲染加载数据列表。
+    6.load加载函数里面，新增一个条件，如果当前数据的done为true就是已经完成的，就把列表渲染加载到ul里面。
+    7.如果当前数据的done为false，则是待办事项，就把列表渲染到ol里面。
+
+    案例：todolist统计正在记性个数和已经完成个数
+    1.在我们load函数里面操作
+    2.声明2个变量：todocount待办个数，donecount已完成个数
+    3.当进行遍历本地存储数据的时候，如果数据done为false，则todocount++，否则donecount++。
+    4.最后修改相应的元素text().
+
+# 11.jQuery尺寸，位置操作
+
+|语法|用法|
+|---|---|
+|width()/height()|取得匹配元素宽度和高度值，只算width/height|
+|innerWidth()/innerHeight()|取得匹配元素宽度和高度值，包含padding|
+|outerWidth()/outerHeight()|取得匹配元素宽度和高度值，包含padding，border|
+|outerWidht(true)/outerHeight(true)|取得匹配元素宽度和高度值，包含padding，border，margin|
 
 
 
