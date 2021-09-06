@@ -416,6 +416,31 @@ bootstrap框架也是依赖于jQuery开发的，因此里面的js插件使用，
 |outerWidth()/outerHeight()|取得匹配元素宽度和高度值，包含padding，border|
 |outerWidht(true)/outerHeight(true)|取得匹配元素宽度和高度值，包含padding，border，margin|
 
+以上参数为空，则是获取相应值，返回的是数字型。
+如果参数为数字，则是修改相应值。
+参数可以不必写单位。
+
+# 11.2jQuery位置
+
+位置主要有三个：offset()、position()、scrollTop()/scrollLeft()
+
+## 1.offset()设置或获取元素偏移
+
+    console.log($("div").outerWidth());
+    1.offset()方法设置或返回被选元素相对于文档的偏移坐标，跟父级没有关系。
+    2.该方法有2个属性left、top。offset().top用于获取距离文档顶部的距离，offset().left用于获取距离文档左侧的距离。
+    3.可以设置元素的偏移：offset({top:10,left:10});
+
+## 2.position()获取元素偏移
+
+1.获取距离带有定位父级位置(偏移)position 如果没有带有定位的父级，则文档为准
+2.此方法只能获取，不能设置偏移
+
+## 3.scrollTop()/scrollLeft()设置或获取元素被卷去的头部和左侧
+
+    1.scrollTop()方法设置或返回被选元素被卷去的头部
+    
+
 
 
 
