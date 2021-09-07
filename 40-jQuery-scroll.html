@@ -8,21 +8,20 @@
     <title>Document</title>
     <style>
         .container {
-            width: 500px;
+            width: 900px;
             height: 1500px;
-            margin-top: 400px;
-            margin-left: 200px;
+            margin: 400px auto;
             background-color: royalblue;
 
         }
 
         .back {
-            position: absolute;
+            position: fixed;
             width: 50px;
             height: 50px;
             background-color: pink;
-            top: 600px;
-            left: 1000px;
+            right: 30px;
+            bottom: 100px;
             display: none;
         }
     </style>
@@ -45,7 +44,15 @@
                 } else {
                     $(".back").fadeOut();
                 }
-            })
+            });
+
+            //返回顶部
+            $(".back").click(function () {
+                // $(document).scrollTop(0);
+                $("body,html").stop().animate({
+                    scrollTop: 0
+                })
+            });
 
         })
     </script>

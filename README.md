@@ -439,6 +439,15 @@ bootstrap框架也是依赖于jQuery开发的，因此里面的js插件使用，
 ## 3.scrollTop()/scrollLeft()设置或获取元素被卷去的头部和左侧
 
     1.scrollTop()方法设置或返回被选元素被卷去的头部
+
+案例：带有动画的返回顶部
+
+1.核心原理：使用animate动画返回顶部。
+2.animate动画函数里面有个scrollTop属性，可以设置位置。
+3.但是是元素做动画，因此$("body,html").animate(scrollTop:0).不能是文档document。
+
+
+
     
 
 
